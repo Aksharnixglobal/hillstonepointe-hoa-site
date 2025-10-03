@@ -2,240 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hillstone Pointe Homeowners Association</title>
+    <title>Hillstone Pointe HOA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1b263b;
-            --secondary: #778da9;
-            --accent: #f4d35e;
-            --background: #f5f6fa;
+            --primary: #224466;
+            --accent: #2b7dbb;
+            --background: #edf2fa;
+            --navy: #18355e;
             --card-bg: #fff;
-            --shadow: 0 2px 24px rgba(44,62,80,.08);
-            --radius: 12px;
+            --border-radius: 14px;
         }
         body {
-            font-family: 'Inter', 'Roboto', Arial, sans-serif;
+            font-family: 'Inter', Arial, sans-serif;
             margin: 0;
             background: var(--background);
-            color: #212529;
+            color: #1c2833;
         }
         header {
-            background: var(--primary);
+            background: var(--navy);
             color: #fff;
-            padding: 3rem 1rem 2rem 1rem;
-            text-align: center;
-            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 2rem 1.5rem 2rem;
         }
-        header img {
-            max-width: 120px;
-            margin-bottom: 1rem;
+        .logo {
+            width: 70px;
+            height: 70px;
+            margin-right: 2rem;
+            border-radius: 50%;
+            object-fit: contain;
+            background: #fff;
+            border: 2px solid var(--accent);
         }
-        header h1 {
-            font-size: 2.7rem;
+        .site-title {
+            font-size: 2.3rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        header p {
-            font-size: 1.18rem;
-            margin: 0 auto 0.5rem auto;
-            max-width: 600px;
         }
         nav {
+            background: var(--primary);
             display: flex;
+            gap: 2rem;
             justify-content: center;
-            gap: 2.5rem;
-            background: var(--secondary);
-            color: #fff;
-            font-weight: 600;
-            padding: 0.9rem 0;
+            padding: 1rem 0;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            letter-spacing: 1px;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 0.2rem;
-            transition: border-color 0.2s;
-        }
-        nav a:hover {
-            border-bottom: 2px solid var(--accent);
-        }
-        main {
-            max-width: 1050px;
-            margin: 2.5rem auto;
-            padding: 0 1.5rem;
-        }
-        .intro {
-            background: var(--card-bg);
-            box-shadow: var(--shadow);
-            border-radius: var(--radius);
-            padding: 2rem 2rem 1.5rem 2rem;
-            margin-bottom: 2.5rem;
-            text-align: center;
-        }
-        .intro h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        section.card {
-            background: var(--card-bg);
-            margin-bottom: 2rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            padding: 2rem 1.5rem;
-        }
-        section.card h2 {
-            margin-top: 0;
-            color: var(--primary);
-            font-size: 1.20rem;
-            margin-bottom: 1rem;
-        }
-        ul {
-            padding-left: 1.2rem;
-        }
-        .board-list {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 0;
-        }
-        .board-list li {
-            margin-bottom: 1.2rem;
-            font-size: 1.07rem;
-        }
-        .board-list strong {
-            color: var(--accent);
-        }
-        .contact-form label {
             font-weight: 600;
-            color: var(--primary);
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin-bottom: 1rem;
+            padding: 0.4rem 1rem;
             border-radius: 8px;
-            border: 1px solid #d4e1f2;
-            font-family: inherit;
-            font-size: 1rem;
-            background: #f8fafb;
-        }
-        .contact-form button {
-            background: var(--accent);
-            color: #222;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-family: inherit;
-            font-weight: 700;
             transition: background 0.2s;
         }
-        .contact-form button:hover {
-            background: var(--primary);
-            color: #fff;
+        nav a:hover {
+            background: var(--accent);
+        }
+        .banner {
+            width: 100%;
+            max-height: 340px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.95);
+        }
+        main {
+            max-width: 900px;
+            margin: -60px auto 0 auto;
+            padding: 0 1rem 2rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        .main-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 32px rgba(30, 60, 90, 0.10);
+            padding: 2.2rem 2rem 2rem 2rem;
+            margin-top: -80px;
+        }
+        .main-card h2 {
+            color: var(--accent);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        .main-card ul {
+            padding-left: 1.3rem;
+        }
+        .main-card li {
+            margin-bottom: 0.8rem;
+            font-size: 1.07rem;
+        }
+        .main-card a {
+            color: var(--accent);
+            text-decoration: underline;
         }
         footer {
-            background: var(--primary);
+            background: var(--navy);
             color: #fff;
             text-align: center;
             padding: 1.3rem;
+            margin-top: 2rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            font-size: 0.96rem;
             letter-spacing: 1px;
-            margin-top: 3rem;
-            border-radius: var(--radius) var(--radius) 0 0;
+        }
+        @media (max-width: 600px) {
+            .main-card {
+                padding: 1.2rem 0.5rem;
+            }
+            header {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 1rem;
+            }
+            .logo {
+                margin: 0 0 1rem 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Optional: HOA logo below, add your image URL if available -->
-        <!-- <img src="YOUR_LOGO_URL" alt="Hillstone Pointe HOA Logo"> -->
-        <h1>Hillstone Pointe HOA</h1>
-        <p>Dedicated to serving our community with integrity, transparency, and care.</p>
+        <!-- Replace with your logo or keep as is for demo -->
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=70&h=70&facepad=2.5" alt="Hillstone Pointe HOA Logo" class="logo">
+        <span class="site-title">Hillstone Pointe HOA</span>
     </header>
+    <!-- Stock photo from Unsplash, neighborhood style -->
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Hillstone Pointe Neighborhood" class="banner">
     <nav>
-        <a href="#announcements">Announcements</a>
-        <a href="#events">Events</a>
-        <a href="#documents">Documents</a>
-        <a href="#board">Board</a>
-        <a href="#contact">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">Documents</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+        <a href="#">Login</a>
     </nav>
     <main>
-        <div class="intro">
-            <h2>Welcome to Hillstone Pointe</h2>
-            <p>
-                Our Homeowners Association is committed to fostering a safe, beautiful, and vibrant neighborhood for all residents. 
-                Stay informed of community news, access key documents, and get involved in upcoming events. 
-                We invite you to reach out with questions or suggestions!
-            </p>
+        <div class="main-card">
+            <h2>Welcome to Hillstone Pointe!</h2>
+            <ul>
+                <li><strong>Latest Announcement:</strong> Annual HOA meeting scheduled for November 15, 2025 at 6PM.</li>
+                <li>Pool maintenance scheduled for October 10-20, 2025.</li>
+                <li>Download the latest newsletter <a href="#">here</a>.</li>
+            </ul>
+            <h2>Community Documents</h2>
+            <ul>
+                <li><a href="#">HOA Bylaws (PDF)</a></li>
+                <li><a href="#">Meeting Minutes (PDF)</a></li>
+                <li><a href="#">Pool Rules (PDF)</a></li>
+                <li><a href="#">Architectural Request Form</a></li>
+            </ul>
         </div>
-        <div class="grid">
-            <section class="card" id="announcements">
-                <h2>Announcements</h2>
-                <ul>
-                    <li><strong>Annual Meeting:</strong> November 15, 2025 at 6PM, Clubhouse.</li>
-                    <li><strong>Pool Closure:</strong> October 10-20, 2025 for scheduled maintenance.</li>
-                    <li><strong>Newsletter:</strong> The Fall 2025 edition is now available <a href="#" style="color:var(--primary);text-decoration:underline;">here</a>.</li>
-                </ul>
-            </section>
-            <section class="card" id="events">
-                <h2>Upcoming Events</h2>
-                <ul>
-                    <li>Halloween Parade – October 31, 2025</li>
-                    <li>Board Meeting – November 15, 2025</li>
-                    <li>Holiday Decorating Contest – December 20, 2025</li>
-                </ul>
-            </section>
-        </div>
-        <div class="grid">
-            <section class="card" id="documents">
-                <h2>Community Documents</h2>
-                <ul>
-                    <li><a href="#" style="color:var(--primary);text-decoration:underline;">HOA Bylaws (PDF)</a></li>
-                    <li><a href="#" style="color:var(--primary);text-decoration:underline;">Meeting Minutes (PDF)</a></li>
-                    <li><a href="#" style="color:var(--primary);text-decoration:underline;">Pool Rules (PDF)</a></li>
-                    <li><a href="#" style="color:var(--primary);text-decoration:underline;">Architectural Request Form</a></li>
-                </ul>
-            </section>
-            <section class="card" id="board">
-                <h2>Board Members</h2>
-                <ul class="board-list">
-                    <li><strong>Jane Smith</strong> – President<br><em>Experienced community leader and dedicated resident.</em></li>
-                    <li><strong>John Doe</strong> – Vice President<br><em>Committed to neighborhood improvement and outreach.</em></li>
-                    <li><strong>Mary Johnson</strong> – Treasurer<br><em>Ensuring transparency in financial matters.</em></li>
-                    <li><strong>Michael Lee</strong> – Secretary<br><em>Focused on communication and documentation.</em></li>
-                </ul>
-            </section>
-        </div>
-        <section class="card" id="contact">
-            <h2>Contact the HOA</h2>
-            <form class="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
     </main>
     <footer>
         &copy; 2025 Hillstone Pointe Homeowners Association. All rights reserved.
